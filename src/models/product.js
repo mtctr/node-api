@@ -7,39 +7,39 @@ const schema = new Schema({
   title: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   slug: {
     type: String,
     required: [true, "O slug é obrigatório"],
     trim: true,
     index: true,
-    unique: true
+    unique: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   price: {
     type: Number,
-    required: true
+    required: true,
   },
   active: {
     type: Boolean,
     required: true,
-    default: true
+    default: true,
   },
   tags: [
     {
       type: String,
-      required: true
-    }
+      required: true,
+    },
   ],
   image: {
     type: String,
     required: true,
-    trim: true
-  }
+    trim: true,
+  },
 });
 
 module.exports = mongoose.model("Product", schema);
